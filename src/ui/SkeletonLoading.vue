@@ -7,11 +7,11 @@ defineProps({
     <div>
       
         
-        <div v-if="type ==='category'" class="flex items-center animate-pulse ">
+        <div v-if="type ==='category'" class="flex items-center animate-pulse  ">
             <span class="bg-gray-100 rounded-xl border-[1px] w-[60px]  h-[63px] border-neutral-100 p-3" style="transform: translateX(30px);">
                 
             </span>
-            <button class="flex items-center rounded-xl border-[2px] border-gray-100 h-[85px] w-full">
+            <button class="flex items-center rounded-xl border-[2px] border-gray-100 h-[85px] w-full ">
                 <div class="flex-col justify-start text-start text-black pl-10 w-full">
                     <p class="bg-gray-100 rounded-lg w-24 py-2"> </p>
                     <p class="bg-gray-100 w-40 rounded-lg py-2 my-1"> </p>

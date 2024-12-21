@@ -118,7 +118,7 @@
                 +998 88 500 50 00 </span>
         </div>
         </div>
-        <div class=" flex justify-center gap-20 py-5 ">
+        <div class=" flex justify-center gap-20 py-5 max-sm:gap-10 ">
             <span>
                 <svg width="150" height="50" viewBox="0 0 150 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="0.5" y="0.5" width="149" height="49" rx="6.5" fill="#0C0D10" />

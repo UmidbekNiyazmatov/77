@@ -1,6 +1,6 @@
 <script setup>
 import {ref, watch ,  onMounted } from "vue";
-import Category from "./Categories-props.vue";
+import Category from "./Categories-item.vue";
 import SkeletonLoading from "../../ui/SkeletonLoading.vue"
 import { data } from "@/data/uz.js";
 
@@ -35,8 +35,8 @@ onMounted(() => {
     <div class="bg-white">
         <div class="container w-full  bg-white  ">
             <div class="text-center">
-                <div class="flex justify-center items-center  pl-24  " style="transform: translateY(-35px);">
-                    <span class="" style="transform: translateX(35px);">
+                <div class=" relative flex justify-center items-center  pl-24  " style="transform: translateY(-35px);">
+                    <span class="" >
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M16.9265 17.0396L20.3996 20.3996M19.2796 11.4396C19.2796 15.7695 15.7695 19.2796 11.4396 19.2796C7.1097 19.2796 3.59961 15.7695 3.59961 11.4396C3.59961 7.1097 7.1097 3.59961 11.4396 3.59961C15.7695 3.59961 19.2796 7.1097 19.2796 11.4396Z"
@@ -45,8 +45,8 @@ onMounted(() => {
                     </span>
                     <input type="text" name="" id="" class="p-5 pl-10 rounded-lg w-[580px]  border-2 "
                         placeholder=" Что вы ищите?">
-                    <button class="bg-black text-white p-[14px] w-32 rounded-xl "
-                        style="transform: translateX(-135px);">
+                    <button class="bg-black text-white p-[14px] w-32 rounded-xl absolute right-[20px]"
+                        >
                         Поиск
                     </button>
                 </div>

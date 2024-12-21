@@ -1,4 +1,21 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+import Modal from './Modal-login.vue';
+
+
+
+const isOpenModal = ref(false)
+
+const openModal = () => {
+  isOpenModal.value = true;
+};
+
+const closeModal = () => {
+  isOpenModal.value = false
+}
+
+
+</script>
 
 <template>
   <div class="bg-slate-50 h-20 mb-24 w-full">
@@ -23,8 +40,9 @@
               />
               <path d="M20 7.81641H0V12.184H20V7.81641Z" fill="#41479B" />
             </svg>
-
-            Русский
+              <span class="max-sm:hidden" >Русский</span>
+              <span class="max-sm:flex hidden " >Pу</span>
+            
 
             <span class="icon-down text-[8px]"></span>
 
@@ -38,20 +56,51 @@
 
       <div class="flex justify-end gap-3 w-full">
         <button class="flex items-center gap-2 group hover:text-blue-600">
-          <span class="icon-like text-lg"> </span>
+          <span class="icon-like  max-sm:bg-slate-300 max-sm:p-2 max-sm:rounded-lg text-lg "> </span>
           <span class="max-md:hidden lg:flex"> Избранные </span>
         </button>
-        <span class="flex items-center">|</span>
+        <span class="flex items-center py-2 ">|</span>
 
-        <button class="flex items-center bg-slate-300 max-md:px-2 px-6 my-5 p-3 rounded-xl gap-2">
+        <button @click="openModal" class="  flex items-center bg-slate-300 max-md:px-2 py-2 px-6 my-5 p-3 rounded-lg gap-2">
           <span class="max-md:hidden lg:flex"> Войти </span>
-          <span class="icon-exit"> </span>
+          <span class="icon-exit text-lg "> </span>
         </button>
       </div>
     </div>
-    <div class="flex justify-center w-full">
+    <Modal :isOpen="isOpenModal" @close="closeModal" > 
+        <div class="  w-full">
+            <h1 class="text-3xl py-3 ">
+              Добро пожаловать!
+            </h1>
+            <p class="text-gray-500" >
+              Войти в систему чтобы торговать в системе            </p>
+            <div class=" flex-col pt-5 pb-2  ">
+                <div class="pt-5">
+                    <div>Логин</div>
+                    <input type="text" class=" w-full  rounded-lg  border-2 p-3   bg-neutral-300"
+                        placeholder="Введите логин">
+                </div>
+                <div class="pt-5">
+                    <div>Пароль</div>
+                    <input type="text" class=" w-full  rounded-lg  border-2 p-3   bg-neutral-300"
+                        placeholder="Введите пароль">
+                </div>
+            </div>
+            <div class="text-blue-600" >Забыли пароль?</div>
+            <button class="flex justify-center rounded-xl w-full p-3 text-white  bg-blue-500 mt-10  ">
+              Войти
+            </button>
+            <div>
+              Хотите стать продавцом?
+            </div>
+            <button class="flex justify-center rounded-xl w-full p-3 text-blue-500 border-2  border-blue-500 mt-10  ">
+              Подать заявку
+            </button>
+        </div>
+    </Modal>
+    <div class="flex bg-blue-50 justify-center w-full">
       <router-link to="/">
-        <div class="bg-white p-5 rounded-b-2xl max-sm:w-[150px] max-sm:px-3 max-md:w-[200px]  " style="transform: translateY(-100px)">
+        <div class="bg-white p-5 rounded-b-2xl max-sm:w-[150px] max-sm:px-3 max-md:w-[200px]  " style="transform: translateY(-90px)">
           <svg
             width="100%"
             height="72"
@@ -93,6 +142,8 @@
         </div>
       </router-link>
     </div>
+    
+
   </div>
 </template>
 

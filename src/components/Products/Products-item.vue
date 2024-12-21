@@ -43,7 +43,7 @@ const toggleLogin = () => {
         
         <img :src="item.img" alt="" class="rounded-t-xl"  />
         <div class="py-5 pl-5 pr-1  bg-white  rounded-b-xl ">
-            <div class="p-2 max-w-28  rounded-lg bg-neutral-300 text-neutral-700"> {{ item.country }} </div>
+            <div class="p-2 max-w-28 flex justify-center rounded-lg bg-neutral-300 text-neutral-700"> {{ item.country }} </div>
 
             <h1 class="text-lg max-sm:text-base  h-[80px] "><b> {{ item.name }} </b> </h1>
             <p class="text-neutral-400">{{ item.time }}</p>
