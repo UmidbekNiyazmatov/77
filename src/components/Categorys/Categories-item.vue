@@ -30,14 +30,12 @@ const toggleRotate = () => {
                     <b>{{ item.name }}</b>
                     <p class="text-neutral-400 w-full">{{ item.count }}</p>
                 </div>
-                <i :class="{ 'rotate-180': isRotated, 'rotate-0': !isRotated }" class="icon-down mr-3 text-[8px] transition-transform duration-300 ease-in-out"></i>
+                <i :class="{ 'rotate-30': isRotated, '-rotate-90': !isRotated }" class="icon-down mr-3 text-[8px] transition-transform duration-300 ease-in-out hover:border-blue-500 "></i>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
-.icon-down {
-    transition: transform 0.3s ease-in-out;
-}
+
 </style>

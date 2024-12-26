@@ -29,7 +29,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="bg-blue-50" >
+  <div class="bg-blue-50  py-20 " >
     <div class="container w-full py-20">
       <div class="text-center">
         <h1 class="text-5xl">Объявления</h1>
@@ -53,12 +53,12 @@ onMounted(() => {
       </div>
 
       <div class="flex justify-center mt-12  ">
-        <button
+        <router-link to="/products"
           class="flex items-center border-4 p-5 gap-3 px-8 rounded-full max-sm:p-3 bg-neutral-300"
         >
           Загрузить больше
           <span class="icon-doubleDown"> </span>
-        </button>
+        </router-link>
       </div>
     </div>
   </div>

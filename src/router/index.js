@@ -13,6 +13,14 @@ const routes = createRouter({
           component:() => import("@/views/HomeView.vue")
         },
         {
+          path: '/products',
+          name: 'protucts',
+          meta:{
+            layout: "default",
+          },
+          component:() => import("@/views/ProductsPage.vue")
+        },
+        {
           path: '/:catchAll',
           name: 'Not-Found',
           meta:{

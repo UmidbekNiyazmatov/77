@@ -5,7 +5,7 @@ import Categoty from "../components/Categorys/Сategories.vue"
 </script>
 
 <template>
-  <main>
+  <main >
     <Categoty />
 
    <Products/>

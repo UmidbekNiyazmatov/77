@@ -1,4 +1,8 @@
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .container {
     max-width: 1440px;
     padding: 0 0px;
@@ -13,7 +17,3 @@
 
 
 
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
