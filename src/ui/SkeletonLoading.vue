@@ -22,18 +22,24 @@ defineProps({
 
         <div v-if="type ==='product'"  class="   h-full w-full   ">
         
-        <span  alt="" class="rounded-t-xl w-full h-full bg-neutral-500  " ></span>
-        <div class="py-5 pl-5 pr-1 w-full  bg-neutral-500  rounded-b-xl ">
-            <div class="p-2 max-w-28 bg-neutral-500  rounded-lg ">  </div>
-
-            <h1 class="text-lg max-sm:text-base w-full h-[80px] bg-neutral-500"><b></b> </h1>
-            <p class=" w-3/6 bg-neutral-500 "> </p>
-            <p class=" w-3/6  bg-neutral-500"> </p>
-
-            <p class="text-3xl  max-sm:text-xl  max-xl:text-2xl w-3/6 bg-neutral-500 "> <b>  </b> <span class="text-xl max-sm:text-xs max-xl:text-sm "></span>
-            </p>
-
-        </div>
+            <div>
+             
+                <div class="  h-full w-full  group hover:text-blue-500 ">
+                    
+                    <img  alt="" class="rounded-t-xl"  />
+                    <div class="py-5 pl-5 pr-1  bg-white  rounded-b-xl ">
+                        <div class="p-2 max-w-28 flex justify-center rounded-lg bg-neutral-300 text-neutral-700">  </div>
+            
+                        <h1 class="text-lg max-sm:text-base  h-[80px] "><b> </b> </h1>
+                        <p class="text-neutral-400"></p>
+                        <p class="text-neutral-400"> </p>
+            
+                        <p class="text-3xl text-black w-full max-sm:text-xl  max-xl:text-2xl "> <b></b> <span class="text-xl max-sm:text-xs max-xl:text-sm text-blue-400"></span>
+                        </p>
+            
+                    </div>
+                </div>
+            </div>
     </div>
 
         

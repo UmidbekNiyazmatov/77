@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch, onMounted } from "vue";
 import Products from "./Products-item.vue";
-import SkeletonLoading from "../../ui/SkeletonLoading.vue";
+import SkeletonLoading from "../../ui/SkeletonLoading.vue"; 
 import { card } from "@/data/uz";
 
 const product = ref([]);
@@ -20,7 +20,7 @@ function loadProduct() {
       img: item.image,
     }));
     loading.value = false;
-  }, 1000);
+  }, 500);
 }
 
 onMounted(() => {

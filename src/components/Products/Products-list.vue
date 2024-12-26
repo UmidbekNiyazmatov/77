@@ -20,7 +20,7 @@ function loadProduct() {
       img: item.image,
     }));
     loading.value = false;
-  }, 1000);
+  }, 500);
 }
 
 onMounted(() => {
@@ -34,6 +34,12 @@ onMounted(() => {
           <Products v-for="item in product" :key="item.id" :item="item" />
         
     </div>
+    <div
+    class="grid max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-5"
+    v-shov="loading"
+  >
+    <SkeletonLoading type="product" v-for="i in 12" :key="i" v-show="loading" />
+  </div>
 </template>
 
 <style scoped>

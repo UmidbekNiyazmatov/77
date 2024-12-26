@@ -18,7 +18,7 @@ const closeModal = () => {
 </script>
 
 <template>
-  <div class="bg-slate-50 h-20 mb-24 w-full">
+  <div class="bg-slate-50 h-20  w-full">
     <div class="container relative flex w-full max-sm:px-2">
       <div class="flex justify-start  w-full">
         <div class="flex items-center gap-2">
@@ -40,7 +40,7 @@ const closeModal = () => {
 
           </div>
           <div class="flex items-center gap-2 group hover:text-blue-600 max-md:hidden lg:flex">
-            <span class="icon-phone pl-2"> </span>
+            <span class="icon-phone pl-2 group "> </span>
             +998 88 500 50 00
           </div>
         </div>
@@ -71,7 +71,7 @@ const closeModal = () => {
 
       <div class="flex justify-end gap-3 w-full">
         <button class="flex items-center gap-2 group hover:text-blue-600">
-          <span class="icon-like  max-sm:bg-slate-300 max-sm:p-2 max-sm:rounded-lg text-lg "> </span>
+          <span class="icon-like text-blue-600 max-sm:bg-slate-300 max-sm:p-2 max-sm:rounded-lg text-lg "> </span>
           <span class="max-md:hidden lg:flex"> Избранные </span>
         </button>
         <span class="flex items-center py-2 ">|</span>
@@ -83,54 +83,12 @@ const closeModal = () => {
         </button>
       </div>
     </div>
-    <Modal :isOpen="isOpenModal" @close="closeModal">
-      <div class=" p- w-full">
-        <h1 class="text-3xl py-3   ">
-          <b>
-            Добро пожаловать!
-          </b>
-        </h1>
-        <p class="text-gray-500">
-          Войти в систему чтобы торговать в системе </p>
-        <div class=" flex-col pt-5 pb-2  ">
-          <div class="pt-5">
-            <div>Логин</div>
-            <input type="text" class=" w-full  rounded-lg  border-2 p-3   bg-neutral-100" placeholder="Введите логин">
-          </div>
-          <div class="pt-5">
-            <div>Пароль</div>
-            <div class="flex  items-center relative  ">
-              <input type="text" class=" w-full  rounded-lg  border-2 p-3   bg-neutral-100"
-                placeholder="Введите пароль">
-              <span class="icon-eye-closed absolute right-3 "></span>
-            </div>
-          </div>
-        </div>
-        <div class="text-blue-600">Забыли пароль?</div>
-        <button class="flex justify-center rounded-xl w-full p-3 text-white  bg-blue-500 mt-10  ">
-          Войти
-        </button>
-        <div class="flex w-full my-5 justify-center items-center ">
-          <span class="p-3 w-[200px]  text-red-600 ">
-            <hr>
-          </span>
-          <div class=" w-full text-sm text-gray-500 ">
-            Хотите стать продавцом?
-          </div>
-          <span class="p-3 w-[200px]  ">
-            <hr>
-          </span>
-        </div>
-        <button class="flex justify-center rounded-xl w-full p-3 text-blue-500 border-2  border-blue-500   ">
-          Подать заявку
-        </button>
-      </div>
 
-    </Modal>
+    <Modal :isOpen="isOpenModal" @close="closeModal" />
+      
 
-    <div class="w-full bg-gray-100 py-20 ">
+   
 
-    </div>
 
 
   </div>

@@ -18,7 +18,7 @@ function loadCategory() {
         count: item.count+"объявлений",
     }));
     loading.value = false ; 
-    },1000);
+    },500);
 }
 
 onMounted(() => {
@@ -32,11 +32,11 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="bg-white ">
-        <div class="container w-full  bg-white  ">
-            <div class="text-center">
-                <div class="  flex justify-center   pl-24  " style="transform: translateY(-35px);">
-                    <div class="relative flex items-center w-auto " >
+    <div class="bg-white  ">
+        <div class="container w-full   bg-white  ">
+            <div class="text-center  ">
+                <div class="  flex justify-center " style="transform: translateY(-35px);">
+                    <div class="relative flex items-center  " >
                     <span class="absolute left-[10px]  " >
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -44,9 +44,9 @@ onMounted(() => {
                                 stroke="#D5D8DB" stroke-width="2" stroke-linecap="round" />
                         </svg>
                     </span>
-                    <input type="text" name="" id="" class="p-5 pl-10  rounded-lg w-[580px]   border-2 "
+                    <input type="text" name="" id="" class="p-5 pl-10 rounded-lg w-[580px] max-sm:w-[400px] max-sm:p-3 max-sm:pl-10  border-2 "
                         placeholder=" Что вы ищите?">
-                    <button class="bg-black text-white p-[14px] w-32 rounded-xl absolute  right-[10px]"
+                    <button class="bg-black text-white p-[14px] w-32 rounded-xl absolute  right-[10px]  max-sm:p-2 max-sm:w-24 "
                         >
                         Поиск
                     </button>
