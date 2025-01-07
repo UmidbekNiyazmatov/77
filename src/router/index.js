@@ -21,6 +21,15 @@ const routes = createRouter({
           component:() => import("@/views/ProductsPage.vue")
         },
         {
+          path: "/details/:id",
+          name: "ItemDetails",
+          meta:{
+            layout: "default"},
+          component: () => import("../views/ProductsIdPage.vue"),
+          props: true,
+        },
+       
+        {
           path: '/:catchAll',
           name: 'Not-Found',
           meta:{

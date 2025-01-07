@@ -29,7 +29,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="bg-blue-50  py-20 " >
+  <div class="bg-gray-100  py-20 " >
     <div class="container w-full py-20">
       <div class="text-center">
         <h1 class="text-5xl">Объявления</h1>

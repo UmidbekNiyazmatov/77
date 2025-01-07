@@ -32,6 +32,11 @@ onMounted(() => {
 </script>
 
 <template>
+    <div>
+        <div class=" bg-gray-100 h-[100px]">
+
+        </div>
+    
     <div class="bg-white  ">
         <div class="container w-full   bg-white  ">
             <div class="text-center  ">
@@ -78,7 +83,7 @@ onMounted(() => {
             </div>
         </div>
     </div>
-
+</div>
 </template>
 
 <style scoped></style>

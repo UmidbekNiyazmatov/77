@@ -6,7 +6,7 @@ import Categoty from "../components/Categorys/Сategories.vue"
 
 <template>
   <main >
-    <Categoty />
+   <Categoty />
 
    <Products/>
 

@@ -134,13 +134,72 @@ export const data = [
 
 export const card = [
     {   
+        id: 1 ,
         country:" г. Ташкент ",
         title: "Кепки Corneliani Diamond for him edition.",
         time: "Вчера, 19:20",
         number: "+998 71 200 70 07",
         price: "2 599 000" ,
-        image:"../../../public/image.png"
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
+    },
+    {   
+        id: 2 ,
+        country:" г. Самарканд",
+        title: "Chevrolet Onix 1.2 Turbo в наличии",
+        time: "Вчера, 19:20",
+        number: "+998 71 200 70 07",
+        price: "204 000 000" ,
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
 
+    },
+    {   
+        id: 3 ,
+        country:" г. Ташкент ",
+        title: "7Saber Trucker Cap",
+        time: "Вчера, 19:20",
+        number: "+998 71 200 70 07",
+        price: "280 000" ,
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
+    },
+    {   
+        id: 4 ,
+        country:" г. Ташкент ",
+        title: "Оригинальные кроссовки Nike Air Max Plus",
+        time: "Вчера, 19:20",
+        number: "+998 71 200 70 07",
+        price: "2 599 000" ,
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
+
+    },
+    {   
+        id: 5 ,
+        country:" г. Ташкент ",
+        title: "Apple Watch Series 8 - USA Non active",
+        time: "Вчера, 19:20",
+        number: "+998 71 200 70 07",
+        price: "2 599 000" ,
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
+
+    },
+    {   
+        country:" г. Ташкент ",
+        title: "Кепки Corneliani Diamond for him edition.",
+        time: "Вчера, 19:20",
+        number: "+998 71 200 70 07",
+        price: "2 599 000" ,
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
     },
     {   
         country:" г. Самарканд",
@@ -148,7 +207,9 @@ export const card = [
         time: "Вчера, 19:20",
         number: "+998 71 200 70 07",
         price: "204 000 000" ,
-        image:"../../../public/image.png"
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
 
     },
     {   
@@ -157,8 +218,9 @@ export const card = [
         time: "Вчера, 19:20",
         number: "+998 71 200 70 07",
         price: "280 000" ,
-        image:"../../../public/image.png"
-
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
     },
     {   
         country:" г. Ташкент ",
@@ -166,8 +228,9 @@ export const card = [
         time: "Вчера, 19:20",
         number: "+998 71 200 70 07",
         price: "2 599 000" ,
-        image:"../../../public/image.png"
-
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
     },
     {   
         country:" г. Ташкент ",
@@ -175,16 +238,9 @@ export const card = [
         time: "Вчера, 19:20",
         number: "+998 71 200 70 07",
         price: "2 599 000" ,
-        image:"../../../public/image.png"
-
-    },
-    {   
-        country:" г. Ташкент ",
-        title: "Кепки Corneliani Diamond for him edition.",
-        time: "Вчера, 19:20",
-        number: "+998 71 200 70 07",
-        price: "2 599 000" ,
-        image:"../../../public/image.png"
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
 
     },
     {   
@@ -193,7 +249,9 @@ export const card = [
         time: "Вчера, 19:20",
         number: "+998 71 200 70 07",
         price: "204 000 000" ,
-        image:"../../../public/image.png"
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
 
     },
     {   
@@ -202,43 +260,9 @@ export const card = [
         time: "Вчера, 19:20",
         number: "+998 71 200 70 07",
         price: "280 000" ,
-        image:"../../../public/image.png"
-
-    },
-    {   
-        country:" г. Ташкент ",
-        title: "Оригинальные кроссовки Nike Air Max Plus",
-        time: "Вчера, 19:20",
-        number: "+998 71 200 70 07",
-        price: "2 599 000" ,
-        image:"../../../public/image.png"
-
-    },
-    {   
-        country:" г. Ташкент ",
-        title: "Apple Watch Series 8 - USA Non active",
-        time: "Вчера, 19:20",
-        number: "+998 71 200 70 07",
-        price: "2 599 000" ,
-        image:"../../../public/image.png"
-
-    },
-    {   
-        country:" г. Самарканд",
-        title: "Chevrolet Onix 1.2 Turbo в наличии",
-        time: "Вчера, 19:20",
-        number: "+998 71 200 70 07",
-        price: "204 000 000" ,
-        image:"../../../public/image.png"
-
-    },
-    {   
-        country:" г. Ташкент ",
-        title: "7Saber Trucker Cap",
-        time: "Вчера, 19:20",
-        number: "+998 71 200 70 07",
-        price: "280 000" ,
-        image:"../../../public/image.png"
+        image: new URL("/public/image.png",
+            import.meta.url
+        ).href,
 
     },
 ]

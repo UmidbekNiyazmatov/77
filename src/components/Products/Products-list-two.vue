@@ -1,6 +1,6 @@
 <script setup>
 import { ref, watch, onMounted } from "vue";
-import Products from "./Products-item.vue";
+import Products from "./Products-item-two.vue";
 import SkeletonLoading from "../../ui/SkeletonLoading.vue";
 import { card } from "@/data/uz";
 
@@ -29,15 +29,16 @@ onMounted(() => {
 </script>
 <template>
   <div
-    class=" w-full  grid max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-10 gap-y-5 max-sm:gap-x-5 "
+    class=" w-full  gap-x-10 gap-y-5 max-sm:gap-x-5 "
     v-shov="!loading">
-
-    <Products v-for="item in product" :key="item.id" :item="item" />
-
+    
+    <Products  v-for="item in product" :key="item.id" :item="item" />
+    
   </div>
-  <div  class=" w-full  grid max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-10 gap-y-5 max-sm:gap-x-5 " v-shov="loading">
+
+  <!-- <div  class=" w-full  grid max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-10 gap-y-5 max-sm:gap-x-5 " v-shov="loading">
     <SkeletonLoading type="product" v-for="i in 12" :key="i" v-show="loading" />
-  </div>
+  </div> -->
 </template>
 
 <style scoped></style>

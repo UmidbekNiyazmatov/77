@@ -25,8 +25,8 @@ defineProps({
             <div>
              
                 <div class="  h-full w-full  group hover:text-blue-500 ">
+                    <div class="rounded-t-xl w-full h-[200px] " ></div>
                     
-                    <img  alt="" class="rounded-t-xl"  />
                     <div class="py-5 pl-5 pr-1  bg-white  rounded-b-xl ">
                         <div class="p-2 max-w-28 flex justify-center rounded-lg bg-neutral-300 text-neutral-700">  </div>
             
