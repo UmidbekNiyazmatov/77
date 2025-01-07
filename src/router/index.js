@@ -35,7 +35,7 @@ const routes = createRouter({
           meta:{
             layout: "empty",
           },
-          component:() => import("@/views/AboutView.vue")
+          component:() => import("@/views/404Error.vue")
         },
     
   ],

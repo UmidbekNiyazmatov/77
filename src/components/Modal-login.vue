@@ -1,5 +1,5 @@
 <template>
-    <div class="modal-overlay  fixed bg-modalColor bottom-0 right-0 top-0 left-0 flex justify-center items-center z-1000 " v-if="isOpen" 
+    <div class="modal-overlay  fixed bg-modalColor bottom-0 right-0 top-0 left-0 flex justify-center items-center z-10 " v-if="isOpen" 
     @click.self="closeModal"  >
         <div  class="modal-content bg-customWhite p-[10px] rounded-[8px] max-w-[450px] w-full relative m-3" >
             

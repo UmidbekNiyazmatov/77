@@ -15,6 +15,12 @@ const closeModal = () => {
 }
 
 
+const isRotated = ref(false);
+
+const toggleRotate = () => {
+  isRotated.value = !isRotated.value;
+};
+
 </script>
 
 <template>
@@ -22,13 +28,13 @@ const closeModal = () => {
     <div class="container relative flex w-full max-sm:px-2">
       <div class="flex justify-start  w-full">
         <div class="flex items-center gap-2">
-          <div class="flex items-center gap-2  ">
+          <div @click="toggleRotate"  class="flex items-center gap-2  ">
             <img src="/public/Language.png" alt="">
             <span class="max-sm:hidden">Русский</span>
             <span class="max-sm:flex hidden ">Pу</span>
 
-
-            <span class="icon-down text-[8px]"></span>
+            <i :class="{ 'rotate-0': isRotated, '-rotate-180': !isRotated }" class="icon-down mr-3 text-[8px] transition-transform duration-300 ease-in-out hover:border-blue-500 "></i>
+            
 
           </div>
           <div class="flex items-center gap-2 group hover:text-blue-600 max-md:hidden lg:flex">
