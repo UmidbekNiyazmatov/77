@@ -20,25 +20,26 @@ defineProps({
             </button>
         </div>
 
-        <div v-if="type ==='product'"  class="   h-full w-full   ">
+        <div v-if="type ==='product'"  class="   animate-pulse  h-full w-full   ">
         
             <div>
              
-                <div class="  h-full w-full  group hover:text-blue-500 ">
-                    <div class="rounded-t-xl w-full h-[200px] " ></div>
+                <div class="  h-full w-full mt-8  ">
+                    <div class="rounded-t-xl w-full h-[270px]  bg-gray-100 border-white border-[1px] " ></div>
                     
                     <div class="py-5 pl-5 pr-1  bg-white  rounded-b-xl ">
-                        <div class="p-2 max-w-28 flex justify-center rounded-lg bg-neutral-300 text-neutral-700">  </div>
+                        <div class="p-5 max-w-28 flex justify-center rounded-lg bg-gray-100 ">  </div>
             
-                        <h1 class="text-lg max-sm:text-base  h-[80px] "><b> </b> </h1>
-                        <p class="text-neutral-400"></p>
-                        <p class="text-neutral-400"> </p>
+                        <h1 class="text-lg max-sm:text-base p-3 w-56 mt-3 mb-[50px]  bg-gray-100 rounded-lg "><b> </b> </h1>
+                        <div class=" bg-gray-100 my-2 p-2 w-28 rounded-lg"></div>
+                        <div class=" bg-gray-100 my-2 p-2 w-32 rounded-lg"> </div>
             
-                        <p class="text-3xl text-black w-full max-sm:text-xl  max-xl:text-2xl "> <b></b> <span class="text-xl max-sm:text-xs max-xl:text-sm text-blue-400"></span>
-                        </p>
+                        <div class="text-3xl  bg-gray-100 my-2 w-56 p-4  rounded-lg text-black  max-sm:text-xl  max-xl:text-2xl  "> <b></b> <span class="text-xl max-sm:text-xs max-xl:text-sm text-blue-400"></span>
+                        </div>
             
                     </div>
                 </div>
+                
             </div>
     </div>
 

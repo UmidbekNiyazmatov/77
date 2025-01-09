@@ -32,7 +32,7 @@ function loadProduct() {
     };
   } else {
 
-    router.push("/"); 
+    router.push("/:catchAll"); 
   }
 
   loading.value = false;

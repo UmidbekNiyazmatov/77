@@ -158,7 +158,7 @@ const closeModal = () => {
                             </button>
                         </div>
                     </div>
-                    <div class="flex justify-start gap-3 max-md:hidden">
+                    <div class="flex justify-start gap-3 max-md:hidden  " :class="{ 'hidden': isActive, }" >
                         <span class="p-1 flex  items-center gap-1 rounded-md border-2 border-gray-300 "> Бестселлеры
                             <span class="icon-cancle  text-xl  "></span> </span>
                     </div>

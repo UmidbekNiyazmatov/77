@@ -15,10 +15,42 @@ const closeModal = () => {
 }
 
 
-const isRotated = ref(false);
+// const isRotated = ref(false);
 
 const toggleRotate = () => {
-  isRotated.value = !isRotated.value;
+  // isRotated.value = !isRotated.value;
+  isDropdownOpen.value = !isDropdownOpen.value;
+};
+
+
+
+// Dropdown funksionallik
+const isDropdownOpen = ref(false);
+
+const currentLanguage = ref({
+  name: "Русский",
+  title: "Ру" ,
+  flag: "/public/Language.png",
+});
+
+const languages = ref([
+  {
+    name: "Русский",
+    title: "Ру" ,
+    flag: "/public/Language.png",
+  },
+  {
+    name: "O’zbekcha",
+    title: "Uz" ,
+    flag: "/public/uz.png",
+  },
+]);
+
+
+
+const selectLanguage = (language) => {
+  currentLanguage.value = language;
+  isDropdownOpen.value = false;
 };
 
 </script>
@@ -28,15 +60,27 @@ const toggleRotate = () => {
     <div class="container relative flex w-full max-sm:px-2">
       <div class="flex justify-start  w-full">
         <div class="flex items-center gap-2">
-          <div @click="toggleRotate"  class="flex items-center gap-2  ">
-            <img src="/public/Language.png" alt="">
-            <span class="max-sm:hidden">Русский</span>
-            <span class="max-sm:flex hidden ">Pу</span>
+          <div  class="  ">
+            <div @click="toggleRotate" class="flex items-center gap-2" >
+              <img :src="currentLanguage.flag" width="20px"  alt="flag" >
+              <span class="max-sm:hidden">{{ currentLanguage.name }}</span>
+              <span class="max-sm:flex hidden ">{{ currentLanguage.title }}</span>
 
-            <i :class="{ 'rotate-0': isRotated, '-rotate-180': !isRotated }" class="icon-down mr-3 text-[8px] transition-transform duration-300 ease-in-out hover:border-blue-500 "></i>
-            
+              <i :class="{ 'rotate-180': isDropdownOpen, '-rotate-0': !isDropdownOpen }"
+                class="icon-down mr-3 text-[8px] transition-transform duration-300 ease-in-out hover:border-blue-500 "></i>
+            </div>
+            <div v-if="isDropdownOpen " class="absolute left-2 mt-2 bg-white border rounded-lg shadow-lg z-10 w-auto">
+              <div v-for="(language, index) in languages" :key="index" class=" flex items-center gap-2  px-4 py-2 cursor-pointer hover:bg-gray-100 "
+                @click="selectLanguage(language)">
+                <img :src="language.flag" alt="flag" class="w-5 h-5" />
+                <span class="text-sm font-medium  " >{{ language.name }}</span>
+                
+              </div>
+              
+            </div>
 
           </div>
+          
           <div class="flex items-center gap-2 group hover:text-blue-600 max-md:hidden lg:flex">
             <span class="icon-phone pl-2 group "> </span>
             +998 88 500 50 00
@@ -69,13 +113,15 @@ const toggleRotate = () => {
     </div>
 
     <Modal :isOpen="isOpenModal" @close="closeModal" />
-      
 
-   
+
+
 
 
 
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

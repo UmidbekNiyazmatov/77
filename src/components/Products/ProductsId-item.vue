@@ -24,37 +24,103 @@ const toggleLogin = () => {
 };
 
 
+
+const images = ref([
+    {
+        src:  "https://via.placeholder.com/600x400?text=Image+2",
+        alt: "Image 1",
+    },
+    {
+        src: "https://via.placeholder.com/600x400?text=Image+2",
+        alt: "Image 2",
+    },
+    {
+        src: "https://via.placeholder.com/600x400?text=Image+3",
+        alt: "Image 3",
+    },
+    {
+        src: "https://via.placeholder.com/600x400?text=Image+4",
+        alt: "Image 4",
+    },
+]);
+
+const currentIndex = ref(0);
+
+const nextSlide = () => {
+    currentIndex.value = (currentIndex.value + 1) % images.value.length;
+};
+
+const prevSlide = () => {
+    currentIndex.value =
+        (currentIndex.value - 1 + images.value.length) % images.value.length;
+};
+
 </script>
 
 
 <template>
     <div class="pb-40 max-sm:pb-20">
-        
+
         <div class="py-10 max-sm:mx-5 max-sm:py-5 ">
-            <span class="icon-arrow  hidden max-sm:flex " ></span>
-            
-            <div class="mt-0 max-sm:mt-5 ">Главная Электроника Фены <span class="text-gray-400" >457 147</span></div>
+            <span class="icon-arrow  hidden max-sm:flex "></span>
+
+            <div class="mt-0 max-sm:mt-5 ">Главная Электроника Фены <span class="text-gray-400">457 147</span></div>
         </div>
         <div class="flex max-sm:flex-col  gap-8 ">
             <div class="w-3/4 max-sm:w-full ">
 
                 <div class=" p-10  max-sm:p-4 bg-white  max-sm:rounded-none rounded-3xl ">
-                    <img :src="item.img" alt="" class="rounded-xl w-full h-[500px] max-sm:h-[300px]" />
-                    <div class="flex py-3 gap-3  " >
-                        <img :src="item.img" class="max-sm:w-[90px] w-[200px]  rounded-3xl " alt="">
-                        <img :src="item.img" class="max-sm:w-[90px] w-[200px]   rounded-3xl " alt="">
-                        <img :src="item.img" class="max-sm:w-[90px] w-[200px]  rounded-3xl "   alt="">
-                        <img :src="item.img" class="max-sm:w-[90px] w-[200px]  rounded-3xl "  alt="">
-                        
+                    <div class="relative">
+                        <img :src="images[currentIndex].src"  :alt="images[currentIndex].alt" class="rounded-xl w-full h-[500px] max-sm:h-[300px]" />
+                        <button @click="prevSlide"
+                            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-800 focus:outline-none">
+                            &larr;
+                        </button>
+                        <button @click="nextSlide"
+                            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-800 focus:outline-none">
+                            &rarr;
+                        </button>
                     </div>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <div v-for="(image, index) in images" :key="index" @click="currentIndex = index"
+                            class="cursor-pointer border-2 rounded-md p-1" :class="{
+                                'border-blue-500': currentIndex === index,
+                                'border-gray-300': currentIndex !== index,
+                            }">
+                            <img :src="image.src" :alt="image.alt" class="w-20 h-16 object-cover" />
+                        </div>
+                    </div>
+                    <!-- <div class="relative w-full max-w-4xl mx-auto mt-10">
+                         Asosiy rasm -->
+                        <!-- <div class="relative">
+                            <img :src="images[currentIndex].src" :alt="images[currentIndex].alt"
+                                class="w-full h-auto rounded-lg" /> -->
+
+                            <!-- Oldinga va orqaga tugmalar -->
+
+                        <!-- </div> -->
+
+                        <!-- Kichik tasmalar -->
+                        <!-- <div class="flex justify-center gap-4 mt-4">
+                            <div v-for="(image, index) in images" :key="index" @click="currentIndex = index"
+                                class="cursor-pointer border-2 rounded-md p-1" :class="{
+                                    'border-blue-500': currentIndex === index,
+                                    'border-gray-300': currentIndex !== index,
+                                }">
+                                <img :src="image.src" :alt="image.alt" class="w-20 h-16 object-cover" />
+                            </div>
+                        </div>
+                    </div> --> 
                     <span class="text-neutral-400 text-xl max-sm:text-lg"> Электроника Фены</span>
                     <h1 class="text-3xl max-sm:text-2xl  h-[80px] "><b> {{ item.name }} </b> </h1>
                     <div class=" flex gap-5 pb-10 pt-5 max-sm:pb-5 ">
-                        <div class="p-1 px-5 max-sm:px-2 flex justify-center rounded-lg bg-neutral-300 max-sm:text-base text-lg text-neutral-700">
+                        <div
+                            class="p-1 px-5 max-sm:px-2 flex justify-center rounded-lg bg-neutral-300 max-sm:text-base text-lg text-neutral-700">
                             {{
                                 item.time }}
                         </div>
-                        <div class="p-1 px-5  max-sm:px-2  flex justify-center rounded-lg bg-neutral-300 max-sm:text-base text-lg text-neutral-700">
+                        <div
+                            class="p-1 px-5  max-sm:px-2  flex justify-center rounded-lg bg-neutral-300 max-sm:text-base text-lg text-neutral-700">
                             {{
                                 item.country }}
                         </div>
@@ -98,8 +164,8 @@ const toggleLogin = () => {
                 <div class="bg-white max-sm:hidden p-10 rounded-3xl max-sm:rounded-none">
                     <h1 class="text-3xl pb-5 "> <b> Продавец </b></h1>
                     <div class=" flex   items-center justify-between">
-                        <div class="flex items-center gap-3" >
-                            <div >
+                        <div class="flex items-center gap-3">
+                            <div>
                                 <img src="/public/Seller.png" class="rounded-lg w-[50px]  " alt="">
                             </div>
                             <div>
@@ -124,7 +190,7 @@ const toggleLogin = () => {
                     <h1 class="text-3xl pb-5 hidden max-sm:flex "> <b> Продавец </b></h1>
                     <div>
                         <div class="flex items-center gap-3  ">
-                            <div >
+                            <div>
                                 <img src="/public/Seller.png" class="rounded-lg w-[50px]  " alt="">
                             </div>
                             <div>
@@ -132,14 +198,15 @@ const toggleLogin = () => {
                                 <span class="text-gray-400"> ID: 1326547 </span>
                             </div>
                         </div>
-                        <div class="max-sm:flex max-sm:justify-between "  >
-                        <div class=" text-xl py-5 max-sm:text-lg max-sm:py-2  ">
-                            <b> {{ item.number }} </b>
+                        <div class="max-sm:flex max-sm:justify-between ">
+                            <div class=" text-xl py-5 max-sm:text-lg max-sm:py-2  ">
+                                <b> {{ item.number }} </b>
+                            </div>
+                            <button
+                                class=" bg-gray-200 max-sm:px-3 max-sm:text-base max-sm:w-auto  p-3 text-lg rounded-xl  w-full ">
+                                <b> Все объявления </b>
+                            </button>
                         </div>
-                        <button class=" bg-gray-200 max-sm:px-3 max-sm:text-base max-sm:w-auto  p-3 text-lg rounded-xl  w-full ">
-                            <b> Все объявления </b>
-                        </button>
-                    </div>
                     </div>
 
                 </div>
@@ -161,7 +228,7 @@ const toggleLogin = () => {
                 <div class="py-5 max-sm:px-5 ">
                     <button
                         class=" flex justify-center items-center gap-3  p-3 shadow-sm hover:bg-blue-100 bg-blue-50  text-blue-500 text-lg rounded-xl  w-full ">
-                        <b  > Скачать в галерею </b><span class="icon-download text-2xl "></span>
+                        <b> Скачать в галерею </b><span class="icon-download text-2xl "></span>
                     </button>
                 </div>
 
