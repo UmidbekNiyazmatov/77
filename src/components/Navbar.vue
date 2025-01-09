@@ -37,12 +37,16 @@ const languages = ref([
   {
     name: "Русский",
     title: "Ру" ,
-    flag: "/public/Language.png",
+    flag: new URL("/public/Language.png",
+            import.meta.url
+        ).href,
   },
   {
     name: "O’zbekcha",
     title: "Uz" ,
-    flag: "/public/uz.png",
+    flag: new URL("/public/uz.png",
+            import.meta.url
+        ).href,
   },
 ]);
 
