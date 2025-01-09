@@ -30,7 +30,9 @@ const isDropdownOpen = ref(false);
 const currentLanguage = ref({
   name: "Русский",
   title: "Ру" ,
-  flag: "/public/Language.png",
+  flag:  new URL("/public/Language.png",
+            import.meta.url
+        ).href,
 });
 
 const languages = ref([
